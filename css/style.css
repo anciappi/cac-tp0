@@ -1,38 +1,81 @@
 * {
-    background-color: rgb(0, 0, 0);
-    color: #ffffffaf;
-    font-family: 'Playfair Display', serif;
-    margin: 5px;
-    padding: 5px;
-}
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #ffffffc5;
+  }
+  
+  body {
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+  }
+  
+  .header {
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+  }
+  
+  .navLink {
+    text-decoration: none;
+  }
+  
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+  }
+  
+  .navMenu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+  }
+  
+  .navMenuItem {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    width: max-content;
+  }
+  
+  .navMenuLink {
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+  
+  .navMenuLink:hover,
+  .navMenuLinkActive {
+    background-color: #7d8183;
+    transition: 0.5s;
+  }
+  
+  /* TOGGLE */
+  .navToggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+  
+    display: none;
+  }
 
-img {
-    max-width: 100%;
-    max-height: 100%;
-
-}
-
-.grid {
+  .grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
-}
-
-
-.logo {
-    grid-column: 1/2;
-}
-
-.navbar {
-    grid-column: 2/7;
-    align-self: center;
-    justify-self: center;
-    font-weight: bold;
-
-}
-
-.navbar > a {
-    padding: 5em;
 }
 
 .presentacion {
@@ -63,6 +106,10 @@ img {
     text-align: left;
     margin-top: 300px;
     font-size: 2em;
+}
+
+.restaurant :hover {
+    background: #fff
 }
 
 .varietales {
@@ -112,3 +159,61 @@ img {
 .contacto {
     grid-column: 1/7;
 }
+
+
+  
+  /* MOBILE */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 70px;
+    }
+  
+    .header {
+      height: 60px;
+    }
+  
+    .logo {
+      font-size: 25px;
+      padding: 0 20px;
+      line-height: 60px;
+    }
+  
+    .navMenu {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      background-color: #2c3e50;
+      position: fixed;
+      top: 60px;
+      width: 100%;
+      padding: 20px 0;
+  
+      height: calc(100% - 60px);
+      overflow-y: auto;
+  
+      left: 100%;
+      transition: left 0.3s;
+    }
+  
+    .navMenuItem {
+      line-height: 70px;
+    }
+  
+    .navMenuLink:hover,
+    .navMenuLinkActive {
+      background: none;
+      color: #83c5f7;
+    }
+  
+    .navToggle {
+      display: block;
+    }
+  
+    .navMenuVisible {
+      left: 0;
+    }
+  
+    .navToggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+  }

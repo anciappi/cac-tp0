@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tierra - Wine & Whiskey</title>
-    <link rel="shortcut icon" href="img/ico/tierra.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-        
-</head>
-<body>
-    <div class="grid">
-            <div class="logo">
-                <img src="logos png/Tierra Wine _ Whisky Logo-small.png" alt="Logo">
-            </div>
-  
-            <nav class="navbar">
-                <a href="index.html">Inicio</a>
-                <a href="pages/bodega.html">Bodega</a>
-                <a href="pages/varietales.html">Varietales</a>
-                <a href="pages/contacto.html">Contacto</a>
-            </nav>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="logo navLink">Logo</a>
+        <button class="navToggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="navMenu">
+          <li class="navMenuItem"><a href="index.html" class="navMenuLink navLink">Inicio</a></li>
+          <li class="navMenuItem"><a href="/pages/bodega.html" class="navMenuLink navLink">Bodega</a></li>
+          <li class="navMenuItem"><a href="/pages/varietales.html" class="navMenuLink navLink">Varietales</a></li>
+          <li class="navMenuItem"><a href="pages/contacto.html" class="navMenuLink navLink">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
-            <div class="presentacion">
-                <h1>Descubre nuestra selección de vinos que cautivarán tus sentidos...</h1> 
-            </div>   
-        
-
+    <main class="grid">
+        <section class="presentacion">
+            <h1>Descubre nuestra selección de vinos que cautivarán tus sentidos...</h1> 
+        </section>  
+    
+        <section class="oferta">
             <div class="restaurant">
                 <h2>Restaurant</h2>
             </div>
@@ -41,14 +43,14 @@
             <div class="reserva">
                 <h2>Reserva</h2>
             </div>
+        </section>
+        <section class="footer">
+            <p>Av Siempre Viva N°656</p>
+            <p>Telefono:01-5656-6598</p>
+            <p>e-Mail: homerS@yahoo.com</p>
+            <div id="redes"> </div>
+        </section>
+    </main>
 
-            <div class="contacto">
-                <p>Av Siempre Viva N°656</p>
-                <p>Telefono:01-5656-6598</p>
-                <p>e-Mail: homerS@yahoo.com</p>
-            </div>
-            <div id="redes">
-            </div>
-    </div>
-</body>
+  </body>
 </html>
